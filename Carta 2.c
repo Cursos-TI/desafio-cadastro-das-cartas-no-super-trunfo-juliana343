@@ -1,19 +1,19 @@
 #include <stdio.h>
 
-int main (){
-    printf("Desafio Super Trunfo!\n");
-    char estado[20] = "DF";
-    char codigo[10] = "A61";
-    int populacao = (3117381);
-    float area = 5760784;
-    char cidade[20] = "Brasília";
-    float pib = 32880000000000000;
-    int turisticos = 32;
+int main(){
+    printf("Desafio 2 Super Trunfo!\n");
+    char estado[20] = "MG";
+    char codigo[10] = "B32";
+    int populacao = 2618;
+    float area = 1336;
+    char cidade[20] = "Simao Pereira";
+    float pib = 103644000;
+    int turisticos = 13;
 
-    printf("Digite o estado: \n");
+    printf("Digite o nome do estado: \n");
     scanf("%s", estado);
 
-    printf("Digite o codigo: \n");
+    printf("Digite o codigo do estado: \n");
     scanf("%s", codigo);
 
     printf("Digite a populacao: \n");
