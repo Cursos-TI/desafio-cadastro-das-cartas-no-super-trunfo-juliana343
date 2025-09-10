@@ -8,9 +8,9 @@ int main() {
     int populacao1 = 2817381; // em habitantes
     int turisticos1 = 32; // número de pontos turísticos
     float area1 = 5760784; // em km²
-    float densidade1 = 489.1; // hab./km²
+    float densidade1;
     double pib1 = 3288000000000000.0; // em bilhões de reais
-    float pibpercapita1 = 116713.39; // em reais
+    float pibpercapita1;
 
     // Leitura da carta 1
     printf("Digite os dados da Carta 1:\n");
@@ -39,10 +39,10 @@ int main() {
     char cidade2[30] = "Simão Pereira";
     int populacao2 = 2947; // em habitantes
     int turisticos2 = 13; // número de pontos turísticos
-    float area2 = 5760784.0; // em km²
-    float densidade2 = 2172; // hab./km²
+    float area2 = 135689; // em km²
+    float densidade2;
     double pib2 = 103644000; // em bilhões de reais
-    float pibpercapita2 = 351.5; // em reais
+    float pibpercapita2;
 
     // Leitura da carta 2
     printf("\nDigite os dados da Carta 2:\n");
@@ -65,6 +65,10 @@ int main() {
     densidade2 = populacao2 / area2;
     pibpercapita2 = (pib2 * 1000000000.0) / populacao2;
 
+    // Cálculo do Super Poder
+    double superpoder1 = populacao1 + area1 + pib1 + turisticos1 + pibpercapita1 - densidade1;
+    double superpoder2 = populacao2 + area2 + pib2 + turisticos2 + pibpercapita2 - densidade2;
+
     // Impressão dos dados
     printf("\n==============================\n");
     printf("       DADOS DA CARTA 1\n");
@@ -78,6 +82,7 @@ int main() {
     printf("Pontos Turísticos: %d\n", turisticos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f reais\n", pibpercapita1);
+    printf("Super Poder: %.2f\n", superpoder1);
 
     printf("\n==============================\n");
     printf("       DADOS DA CARTA 2\n");
@@ -91,6 +96,11 @@ int main() {
     printf("Pontos Turísticos: %d\n", turisticos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pibpercapita2);
+    printf("Super Poder: %.2f\n", superpoder2);
+
+    // Determinar a carta vencedora
+    if (superpoder1 > superpoder2) 
+        printf("\n A Carta 1 é a vencedora!\n");
 
     return 0;
 }
